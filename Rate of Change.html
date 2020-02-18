@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en-us">
+
+<body>
+    <form>
+        <p>Current Price: </p>
+        <input id="currPrice" type="number" required>
+        <p>Previous Price:</p>
+        <input id="prevPrice" type="number" required>
+
+        <button id="submit" type="button">Submit</button>
+
+        <p>Rate of Change: <span id="answer"></span></p>
+    </form>
+
+    <script>
+        var rateOfChange,
+            currPrice,
+            prevPrice;
+        var submit = document.getElementById("submit");
+
+        function calculate() {
+            rateOfChange = parseFloat(document.getElementById("rateOfChange").value);
+            currPrice = parseFloat(document.getElementById("currPrice").value);
+            prevPrice = parseFloat(document.getElementById("prevPrice").value);
+
+            rateOfChange = (currPrice - prevPrice) / prevPrice;
+
+            document.getElementById("answer").innerHTML = rateOfChange;
+        };
+
+        submit.addEventListener("click", calculate);
+    </script>
+
+</body>
+
+</html>

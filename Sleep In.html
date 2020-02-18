@@ -1,0 +1,37 @@
+<!DOCTYPE HTML>
+<html lang="en-us">
+
+<head>
+    <meta charset="utf-8">
+    <title>W07 Coding Assignment - Program #2</title>
+    <script>
+        function calculate() {
+            var now = new Date();
+            var month = now.getMonth();
+            var dayOfMonth = now.getDate();
+            var dayOfWeek = now.getDay();
+
+            //alert ("day " + now):
+            var message = "Get up";
+
+            //Weekends //New Year's Day //4th of July //Christmas
+            if ((dayOfWeek == 0 || dayOfWeek == 6) || (month == 0 && dayOfMonth == 1) || (month == 6 && dayOfMonth == 4) || (month == 11 && dayOfMonth == 25)) {
+                message = "Sleep in.";
+            }
+            else {
+                message = "Get Up!"
+            }
+
+            document.getElementById("output").innerHTML = message;
+        }
+    </script>
+</head>
+
+<body>
+    <h2>Program #02</h2>
+    <p>Press the button</p>
+    <button type="button" onclick="calculate()">Alarm</button><br>
+    <div id="output"></div>
+</body>
+
+</html>

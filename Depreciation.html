@@ -1,0 +1,38 @@
+<!DOCTYPE HTML>
+<html lang="en-us">
+
+<head>
+	<meta charset="utf-8">
+	<title>Investment Calculator</title>
+	<script>
+
+		function doFV() {
+
+			let startValue = parseFloat(document.getElementById("A").value);
+			let endValue = parseFloat(document.getElementById("B").value);
+			let months = parseFloat(document.getElementById("C").value);
+			let depreciation1 = depreciation(startValue, endValue, months);
+			document.getElementById("output").innerHTML = depreciation1;
+		}
+
+		function depreciation(startValue, endValue, months) {
+
+			let depreciation1;
+			return depreciation1 = (startValue - endValue) / months
+		}
+
+	</script>
+</head>
+
+<body>
+
+	Start Value: <input type="text" id="A" size="5"><br>
+	End Value: <input type="text" id="B" size="5"><br>
+	Months: <input type="text" id="C" size="5"><br>
+
+	<button type="button" onclick="doFV()">Compute</button>
+	<div id="output"></div>
+
+</body>
+
+</html>

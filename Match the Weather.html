@@ -1,0 +1,40 @@
+<!DOCTYPE HTML>
+<html lang="en-us">
+
+<head>
+	<meta charset="utf-8">
+	<title>Match your shoes with the weather.</title>
+	<script>
+
+		function shoes() {
+
+			let day = document.getElementById("weatherInputBox").value;
+
+			if (day == "hot") {
+				document.getElementById("outputDiv").innerHTML = "Sandals";
+			}
+			else if (day == "rain") {
+				document.getElementById("outputDiv").innerHTML = "Galoshes";
+			}
+			else if (day == "snow") {
+				document.getElementById("outputDiv").innerHTML = "Boots";
+			}
+			else {
+				document.getElementById("outputDiv").innerHTML = "Shoes";
+			}
+
+		}
+
+	</script>
+</head>
+
+<body>
+	<h1>Match your weather</h1>
+	<h4>Use the words hot, rain, snow and other types of weather</h4>
+	Current weather: <input type="text" id="weatherInputBox"><br>
+
+	<button type="button" onclick="shoes()">Submit </button><br>
+	<div id="outputDiv"></div>
+</body>
+
+</html>

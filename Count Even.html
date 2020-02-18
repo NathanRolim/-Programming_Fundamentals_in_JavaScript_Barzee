@@ -1,0 +1,39 @@
+<!DOCTYPE HTML>
+<html lang="en-us">
+
+<head>
+  <meta charset="utf-8">
+  <title>Array 1</title>
+
+  <script>
+
+    function parameters() {
+
+      let list = [17, 8, 9, 5, 20];
+      let value = countEvens(list);
+      document.getElementById("output").innerHTML = value;
+
+    }
+
+    function countEvens(list) {
+
+      var counter = 0;
+      for (let i = 0; i < list.length; i++) {
+        if ((list[i] % 2) == 0) {
+          counter += 1;
+        }
+      }
+      return counter;
+    }
+
+  </script>
+</head>
+
+<body>
+
+  <button type="button" onclick="parameters()">Calculation</button>
+  <div id="output"></div>
+
+</body>
+
+</html>

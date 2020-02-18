@@ -1,0 +1,39 @@
+<!DOCTYPE HTML>
+<html lang="en-us">
+
+<head>
+	<meta charset="utf-8">
+	<title>Array 2</title>
+	<script>
+
+		function sumArray() {
+
+			let list = [12, 4, 8, 15, 17, 5, 20, 11];
+			let value = getMiddle(list);
+			document.getElementById("output").innerHTML = value;
+		}
+
+		function getMiddle(list) {
+
+			if (list.length % 2 == 0) {
+
+				var middle = list.length / 2;
+				return (list[Math.floor(list.length / 2)] + list[Math.floor(list.length / 2 - 1)]) / 2;
+			}
+
+			else {
+				return list[(list.length - 1) / 2]
+			}
+		}
+
+	</script>
+</head>
+
+<body>
+
+	<button type="button" onclick="sumArray()">Sum</button>
+	<div id="output"></div>
+
+</body>
+
+</html>

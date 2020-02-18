@@ -1,0 +1,33 @@
+<!DOCTYPE HTML>
+<html lang="en-us">
+
+<head>
+    <meta charset="utf-8">
+    <title>W07 Coding Assignment - Program #1</title>
+
+    <script>
+        function calculate() {
+            var total = 0.00;
+            var csubtotal = parseFloat(document.getElementById("csubtotal").value);
+            day = new Date().getDay();
+
+            if ((csubtotal > 50) && day == 2 || day == 3) {
+
+                total = (csubtotal - (csubtotal * 0.10)) * 1.06;
+            } else {
+                total = (csubtotal * 1.06);
+            }
+            document.getElementById("output").innerHTML = total.toFixed(2);
+        }
+    </script>
+</head>
+
+<body>
+    <h2>Program #01</h2>
+    Enter the Customer subtotal: <input type="text" id="csubtotal" required>
+    <button type="submit" onclick="calculate();">Submit</button><br>
+    Total: $
+    <div id="output"></div>
+</body>
+
+</html>

@@ -1,0 +1,37 @@
+<!DOCTYPE HTML>
+<html lang="en-us">
+
+<head>
+	<meta charset="utf-8">
+	<title>Return String</title>
+	<script>
+
+		function doFV() {
+
+			let givenName = parseFloat(document.getElementById("A").value);
+			let familyName = parseFloat(document.getElementById("B").value);
+
+			let finalName = makeFullName(givenName, familyName);
+			document.getElementById("output").innerHTML = finalName;
+		}
+
+		function makeFullName(givenName, familyName) {
+
+			var finalName = givenName, familyName;
+			return finalName
+		}
+
+	</script>
+</head>
+
+<body>
+
+	First Name: <input type="text" id="A" size="5"><br>
+	Last Name: <input type="text" id="B" size="5"><br>
+
+	<button type="button" onclick="doFV()">Show</button>
+	<div id="output"></div>
+
+</body>
+
+</html>
